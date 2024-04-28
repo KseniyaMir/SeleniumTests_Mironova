@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Seleniumtests_Mironova")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fb3fabc256f138848d1a979d7440be63ccc9604c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c758b111d9165ae3b1a614964cd30019f8ca9088")]
 [assembly: System.Reflection.AssemblyProductAttribute("Seleniumtests_Mironova")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Seleniumtests_Mironova")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -148,7 +148,7 @@ public class SeleniumTestsForPractice
     [Test, Description("Проверяем успешное удаление сообщества")]
     public void DeleteCommunityTest()
     {
-        CreateCommunity();
+        var id = CreateCommunity();
 
         var deleteButton = driver.FindElement(By.CssSelector("[data-tid='DeleteButton']"));
         deleteButton.Click();
@@ -158,6 +158,12 @@ public class SeleniumTestsForPractice
 
         // ждем перехода после удаления
         wait.Until(ExpectedConditions.ElementIsVisible(By.CssSelector("[data-tid='Title']")));
+
+        driver.Navigate().GoToUrl($"https://staff-testing.testkontur.ru/communities/{id}");
+        var validationMessage = driver.FindElement(By.CssSelector("[data-tid='ValidationMessage']"));
+        Assert.That(
+            validationMessage.Text == "Объект не найден. Возможно, он удален или вы переходите по неправильной ссылке",
+            "Не отображается нужный текст");
     }
 
     [Test, Description("Проверяем переключение табов в списке сообщества")]
